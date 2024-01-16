@@ -1,0 +1,33 @@
+{
+  "scripts": {
+    "deploy": "arc-deploy",
+    "env": "arc-env --env staging --add PSWD changeme && npm run deploy",
+    "lint": "eslint src/**/*.mjs --fix"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ]
+    },
+    "ignorePatterns": [],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": 2022
+    }
+  },
+  "dependencies": {
+    "@architect/deploy": "^4.6.3",
+    "@architect/env": "^3.0.12",
+    "@architect/functions": "^8.0.0-RC.1",
+    "@aws-lite/client": "^0.14.0",
+    "@aws-lite/s3": "^0.1.12",
+    "aws-sdk": "^2.1536.0",
+    "eslint": "^8.49.0"
+  }
+}
